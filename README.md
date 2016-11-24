@@ -1,6 +1,6 @@
 # Overview
-This project enchances the Ubuntu 16.04 box created in the master branch
-by installing Docker and its companion tool set.
+This project creates an Ubuntu 16.04 box with Xfce and various software development
+tools installed.
 
 # Prerequisites
 * a working [Packer](https://www.packer.io/) installation
