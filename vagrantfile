@@ -26,7 +26,7 @@ Vagrant.configure(2) do |config|
           v.gui = true
           v.name = "packer.xenial-xubuntu"
       end
-      server.vm.box = "xenial-xubuntu/5.1.10"
+      server.vm.box = "xenial-xubuntu"
   end
 
 end
