@@ -5,8 +5,12 @@
   pre_tasks:
       - name: Install Desktop
         package:
-            name: "xubuntu-core"
+            name: "{{ item }}"
             state: present
+        items:
+            - "xubuntu-core"
+            - "firefox"
+            - "chromium-browser"
         become: yes
 
   roles:
