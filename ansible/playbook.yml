@@ -11,6 +11,7 @@
             - "xubuntu-core"
             - "firefox"
             - "chromium-browser"
+            - "evince"
         become: yes
 
   roles:
@@ -18,7 +19,7 @@
       - kurron.atlassian
       - kurron.aws
       - kurron.docker-host
-      - kurron.hashicorp
+      - { role: kurron.hashicorp, hashicorp_vagrant_install: false }
       - kurron.javascript-developer
       - kurron.jvm-developer
       - { role: kurron.operations, operations_loggly_install: false, operations_datadog_install: false }
