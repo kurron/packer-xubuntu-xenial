@@ -21,7 +21,7 @@ Vagrant.configure(2) do |config|
       v.customize ["modifyvm", :id, "--cpus", "1"]
   end
 
-  config.vm.define "xenial-docker" do |server|
+  config.vm.define "xenial-xubuntu" do |server|
       server.vm.provider "virtualbox" do |v|
           v.gui = true
           v.name = "packer.xenial-xubuntu"
