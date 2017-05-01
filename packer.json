@@ -1,19 +1,19 @@
 {
     "description": "Builds an Ubuntu 16.04 Desktop box with various software development tools installed",
-    "min_packer_version": "0.12.3",
+    "min_packer_version": "1.0.0",
 
     "variables": {
         "ssh_name": "vagrant",
         "ssh_pass": "vagrant",
         "hostname": "xenial-xubuntu",
-        "version": "5.1.18",
-        "comment": "Upgrade to VirtualBox 5.1.18",
-        "home": "{{env `HOME`}}"
+        "version": "5.1.22",
+        "comment": "Upgrade to VirtualBox 5.1.22",
+        "home": "{{env `HOME`}}",
+        "atlas": "{{env `ATLAS_ACCOUNT`}}"
     },
 
     "builders": [{
-        "boot_command" : [
-        ],
+        "boot_command" : [],
         "boot_wait": "10s",
         "floppy_files": [],
         "format": "ova",
@@ -57,7 +57,7 @@
        {
            "execute_command": "echo '{{user `ssh_pass`}}' | {{ .Vars }} sudo -E -S sh '{{ .Path }}'",
            "type": "shell",
-           "scripts": ["scripts/zero-out-disk.sh"]
+           "scripts": ["scripts/install-virtualbox.sh","scripts/zero-out-disk.sh"]
        }
     ],
     "post-processors": [
@@ -70,7 +70,7 @@
         },
         {
             "type": "atlas",
-            "artifact": "kurron/xenial-xubuntu",
+            "artifact": "{{user `atlas`}}/xenial-xubuntu",
             "artifact_type": "vagrant.box",
             "metadata": {
                 "provider": "virtualbox",
