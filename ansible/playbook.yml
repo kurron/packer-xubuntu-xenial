@@ -22,6 +22,7 @@
       - { role: kurron.hashicorp, hashicorp_vagrant_install: false }
       - kurron.javascript-developer
       - kurron.jvm-developer
+      - kurron.jvpn
       - { role: kurron.operations, operations_loggly_install: false, operations_datadog_install: false }
       - kurron.python-developer
       - kurron.software-developer
