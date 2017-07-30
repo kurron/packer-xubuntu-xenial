@@ -71,7 +71,7 @@
         },
         {
             "access_token": "{{user `cloud_token`}}",
-            "box_tag": "{{user `cloud_user`}}/xenial-server-docker",
+            "box_tag": "{{user `cloud_user`}}/xenial-xubuntu",
             "type": "vagrant-cloud",
             "version": "{{user `version`}}",
             "version_description": "{{user `comment`}}"
