@@ -15,7 +15,6 @@
         become: yes
 
   roles:
-      - kurron.logfaces
       - kurron.atlassian
       - kurron.aws
       - kurron.docker-host
