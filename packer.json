@@ -6,8 +6,8 @@
         "ssh_name": "vagrant",
         "ssh_pass": "vagrant",
         "hostname": "xenial-xubuntu",
-        "version": "5.1.28",
-        "comment": "Upgrade to VirtualBox 5.1.28",
+        "version": "5.1.29",
+        "comment": "Made JDK 8 the default JVM",
         "home": "{{env `HOME`}}",
         "cloud_user": "{{env `VAGRANT_CLOUD_ACCOUNT`}}",
         "cloud_token": "{{env `VAGRANT_CLOUD_TOKEN`}}"
