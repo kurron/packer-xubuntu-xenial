@@ -19,11 +19,11 @@
       - kurron.aws
       - kurron.docker-host
       - { role: kurron.hashicorp, hashicorp_vagrant_install: false }
-      - kurron.javascript-developer
-      - kurron.jvm-developer
+      - { role: kurron.javascript-developer, javascript_webstorm_install: false }
+      - { role: kurron.jvm-developer, jvm_android_studio_install: false, jvm_visualvm_install: false }
       - kurron.jvpn
       - { role: kurron.operations, operations_loggly_install: false, operations_datadog_install: false }
       - kurron.python-developer
       - kurron.software-developer
-      - kurron.sql-developer
+      - { role: kurron.sql-developer, sql_datagrip_install: false }
 
